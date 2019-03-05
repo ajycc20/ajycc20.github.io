@@ -96,16 +96,18 @@
 
 
 
-  <meta name="description" content="一些有趣的事">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://ajycc20.github.io/index.html">
+  <meta name="description" content="鄙渣学了一学期的JavaScript，无奈并没有学通，最终还是祭出了Js红宝书，从头预习   转换方法所有对象都具有 toLocaleString()、toString()和valueOf()方法。 12345678910111213141516171819var person1 = &amp;#123;    toLocaleString : function () &amp;#123;        ret">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript的Array类型">
+<meta property="og:url" content="https://ajycc20.github.io/2019/03/04/JavaScript的Array类型/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="一些有趣的事">
+<meta property="og:description" content="鄙渣学了一学期的JavaScript，无奈并没有学通，最终还是祭出了Js红宝书，从头预习   转换方法所有对象都具有 toLocaleString()、toString()和valueOf()方法。 12345678910111213141516171819var person1 = &amp;#123;    toLocaleString : function () &amp;#123;        ret">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-04T09:41:58.672Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="一些有趣的事">
+<meta name="twitter:title" content="JavaScript的Array类型">
+<meta name="twitter:description" content="鄙渣学了一学期的JavaScript，无奈并没有学通，最终还是祭出了Js红宝书，从头预习   转换方法所有对象都具有 toLocaleString()、toString()和valueOf()方法。 12345678910111213141516171819var person1 = &amp;#123;    toLocaleString : function () &amp;#123;        ret">
 
 
 
@@ -114,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="https://ajycc20.github.io/">
+  <link rel="canonical" href="https://ajycc20.github.io/2019/03/04/JavaScript的Array类型/">
 
 
 
@@ -124,7 +126,7 @@
   };
 </script>
 
-  <title>Hexo</title>
+  <title>JavaScript的Array类型 | Hexo</title>
   
 
 
@@ -182,8 +184,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -221,7 +222,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -380,9 +381,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -414,10 +415,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/03/04/JavaScript的Array类型/" class="post-title-link" itemprop="url">JavaScript的Array类型</a>
+          <h1 class="post-title" itemprop="name headline">JavaScript的Array类型
+
               
             
           </h1>
@@ -523,8 +522,7 @@
       
 
       
-        
-          <blockquote>
+        <blockquote>
 <p>鄙渣学了一学期的JavaScript，无奈并没有学通，最终还是祭出了Js红宝书，从头预习</p>
 </blockquote>
 <hr>
@@ -533,260 +531,64 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> people = [person1, person2];</span><br><span class="line">alert(people); <span class="comment">// Nicholas,Greg</span></span><br><span class="line">alert(people.toString()); <span class="comment">// Nicholas,Greg</span></span><br><span class="line">alert(people.toLocaleString()); <span class="comment">// Nicholas,Grigorios</span></span><br></pre></td></tr></table></figure>
 <p>RT,默认调用的是<code>toString()</code>同下一行显式调用。</p>
 <p>eg:<br>可以使用<code>join()</code>更改字符串的分隔方式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</span><br><span class="line">alert(colors.join(<span class="string">"|"</span>)); <span class="comment">// red|green|blue</span></span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/03/04/JavaScript的Array类型/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ajycc20.github.io/2019/02/26/菜鸡的Leecode学习(day01)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ajycc20">
-      <meta itemprop="description" content="一些有趣的事">
-      <meta itemprop="image" content="https://i.loli.net/2019/02/24/5c725e2889c48.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/26/菜鸡的Leecode学习(day01)/" class="post-title-link" itemprop="url">菜鸡的Leecode学习(day01)</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-26 20:25:55" itemprop="dateCreated datePublished" datetime="2019-02-26T20:25:55+08:00">2019-02-26</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-04 17:41:30" itemprop="dateModified" datetime="2019-03-04T17:41:30+08:00">2019-03-04</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/02/26/菜鸡的Leecode学习(day01)/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/26/菜鸡的Leecode学习(day01)/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-            <span id="/2019/02/26/菜鸡的Leecode学习(day01)/" class="leancloud_visitors" data-flag-title="菜鸡的Leecode学习(day01)">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h3 id="写在最先"><a href="#写在最先" class="headerlink" title="写在最先"></a>写在最先</h3><blockquote>
-<p>之前博客用的个人域名然后放在vultr上，前阵子不知道怎么出问题了，访问特别困难，后来发现dnspod解析也需要备案，思来想去干脆直接在github上写了，以前那点文章也懒得恢复了！</p>
-</blockquote>
-<blockquote>
-<p>最近开始在Leecode上刷题，先从简单的开始，嘿嘿！<br>刚好在博客上也做一番记录，算是让自己记忆更深吧。</p>
-</blockquote>
+<a id="more"></a>
 <hr>
-<h4 id="两数之和"><a href="#两数之和" class="headerlink" title="两数之和"></a>两数之和</h4><p>给定一个整数数组 <code>nums</code> 和一个目标值 <code>target</code>，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</p>
-<p>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。</p>
-<p><strong>示例：</strong></p>
-<pre><code>给定 nums = [2, 7, 11, 15], target = 9
-因为 nums[0] + nums[1] = 2 + 7 = 9
-所以返回 [0, 1]
-</code></pre><table>
-<thead>
-<tr>
-<th style="text-align:center">提交时间</th>
-<th style="text-align:center">状态</th>
-<th style="text-align:center">执行用时</th>
-<th style="text-align:center">内存消耗</th>
-<th style="text-align:center">语言</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">14 天前</td>
-<td style="text-align:center">通过</td>
-<td style="text-align:center">52 ms</td>
-<td style="text-align:center">8.1 MB</td>
-<td style="text-align:center">python3</td>
-</tr>
-<tr>
-<td style="text-align:center">14 天前</td>
-<td style="text-align:center">通过</td>
-<td style="text-align:center">7976 ms</td>
-<td style="text-align:center">7.3 MB</td>
-<td style="text-align:center">python3</td>
-</tr>
-</tbody>
-</table>
-<p>第一次提交的堪堪没有超时，因为是直接双for循环暴力解决的。。。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        <span class="keyword">if</span> len(nums) &lt; <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(i + <span class="number">1</span>, len(nums)):</span><br><span class="line">                <span class="keyword">if</span> nums[i] + nums[j] == target:</span><br><span class="line">                    <span class="keyword">return</span>[i, j]</span><br></pre></td></tr></table></figure></p>
-<p>后来仔细想了想用了dict解决，效率还好。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span><span class="params">(self, nums, target)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums: List[int]</span></span><br><span class="line"><span class="string">        :type target: int</span></span><br><span class="line"><span class="string">        :rtype: List[int]</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        dict = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums)):</span><br><span class="line">            temp = target - nums[i]</span><br><span class="line">            <span class="keyword">if</span> nums[i] <span class="keyword">in</span> dict:</span><br><span class="line">                <span class="keyword">return</span> [dict[nums[i]], i]</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                dict[temp] = i</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/02/26/菜鸡的Leecode学习(day01)/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+<h3 id="栈方法"><a href="#栈方法" class="headerlink" title="栈方法"></a>栈方法</h3><p>栈即是需要后进先出的，Js也为此提供了<code>push()</code>和<code>pop()</code>方法用以实现栈的LIFO(Last-In-First-Out)。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"red"</span>, <span class="string">"green"</span>);</span><br><span class="line">alert(count); <span class="comment">// 2</span></span><br><span class="line">alert(colors); <span class="comment">// red,green</span></span><br><span class="line"></span><br><span class="line">count = colors.push(<span class="string">"black"</span>);</span><br><span class="line">alert(count); <span class="comment">// 3</span></span><br><span class="line">alert(colors); <span class="comment">// red,green,black</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = colors.pop();</span><br><span class="line">alert(item); <span class="comment">// "black"</span></span><br><span class="line">alert(colors.length); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="队列方法"><a href="#队列方法" class="headerlink" title="队列方法"></a>队列方法</h3><p>队列的访问方式是FIFO(First-In-First-Out)，Js也有相应的<code>shift()</code>和<code>unshift()</code>方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"red"</span>, <span class="string">"green"</span>);</span><br><span class="line">alert(count); <span class="comment">// 2</span></span><br><span class="line">alert(colors); <span class="comment">// red,green</span></span><br><span class="line"></span><br><span class="line">count = colors.push(<span class="string">"black"</span>);</span><br><span class="line">alert(count); <span class="comment">// 3</span></span><br><span class="line">alert(colors); <span class="comment">// red,green,black</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = colors.shift();</span><br><span class="line">alert(item); <span class="comment">// "red"</span></span><br><span class="line">alert(colors.length); <span class="comment">// 2</span></span><br><span class="line">alert(colors); <span class="comment">// green, black</span></span><br></pre></td></tr></table></figure>
+<p><code>unshift()</code>用以在数组前段添加任意个项并返回新数组长度。</p>
+<hr>
+<h3 id="重排序方法"><a href="#重排序方法" class="headerlink" title="重排序方法"></a>重排序方法</h3><p><code>reverse()</code>和<code>sort()</code>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">values.reverse();</span><br><span class="line">alert(values); <span class="comment">// 5, 4, 3, 2, 1</span></span><br></pre></td></tr></table></figure>
+<p><code>sort()</code>的弊端.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>];</span><br><span class="line">values.sort();</span><br><span class="line">alert(values); <span class="comment">// 0, 1, 10, 15, 5</span></span><br></pre></td></tr></table></figure></p>
+<p>改进方式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">value1, value2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (value1 &lt; value2)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(value1 &gt; value2)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> values = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>];</span><br><span class="line">values.sort(compare);</span><br><span class="line">alert(values); <span class="comment">// 0, 1, 5, 10, 15</span></span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><p><code>concat()</code>.创建当前数组的副本，并将接收到的参数添加到副本的末尾，并返回新的数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</span><br><span class="line"><span class="keyword">var</span> colors2 = colors.concat(<span class="string">"yellow"</span>, [<span class="string">"black"</span>, <span class="string">"brown"</span>]);</span><br><span class="line"></span><br><span class="line">alert(colors); <span class="comment">// red,green,blue</span></span><br><span class="line">alert(colors2); <span class="comment">// red,green,blue,yellow,black,brown</span></span><br></pre></td></tr></table></figure></p>
+<p><code>slice()</code>.基于当前数组中的一或多个项创建一个新数组。<code>slice()</code>方法可以<br>接受一或两个参数，即要返回项的起始和结束位置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>, <span class="string">"yellow"</span>, <span class="string">"purple"</span>];</span><br><span class="line"><span class="keyword">var</span> colors2 = colors.slice(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> colors3 = colors.slice(<span class="number">1</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">alert(colors2); <span class="comment">// green,blue,yellow,purple</span></span><br><span class="line">alert(colors3); <span class="comment">// green,blue,yellow</span></span><br></pre></td></tr></table></figure>
+<p> <code>splice()</code>.有如下三种方法</p>
+<ul>
+<li><code>删除</code>: 指定2个参数，要删除的第一项的位置和要删除的项数。</li>
+<li><code>插入</code>: 指定3个参数，起始位置、0(要删除的项数)和要插入的项。</li>
+<li><code>替换</code>: 指定3个参数，起始位置、要删除的项数和要插入任意数量的项。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</span><br><span class="line"><span class="keyword">var</span> removed = colors.splice(<span class="number">0</span>,<span class="number">1</span>); <span class="comment">// 删除第一项</span></span><br><span class="line">alert(colors); <span class="comment">// green,blue</span></span><br><span class="line">alert(removed); <span class="comment">// red，返回的数组中只包含一项</span></span><br><span class="line"></span><br><span class="line">removed = colors.splice(<span class="number">1</span>, <span class="number">0</span>, <span class="string">"yellow"</span>, <span class="string">"orange"</span>); <span class="comment">// 从位置1开始插入两项</span></span><br><span class="line">alert(colors); <span class="comment">// green,yellow,orange,blue</span></span><br><span class="line">alert(removed); <span class="comment">// 返回的是一个空数组</span></span><br><span class="line"></span><br><span class="line">removed = colors.splice(<span class="number">1</span>, <span class="number">1</span>, <span class="string">"red"</span>, <span class="string">"purple"</span>); <span class="comment">// 插入两项，删除一项</span></span><br><span class="line">alert(colors); <span class="comment">// green,red,purple,orange,blue</span></span><br><span class="line">alert(removed); <span class="comment">// yellow，返回的数组中只包含一项</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h3><p><code>indexOf()</code>和<code>lastIndexOf()</code>.均接收两个参数：要查找的项和(可选)查找起点位置的索引。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">alert(numbers.indexOf(<span class="number">4</span>)); <span class="comment">//3</span></span><br><span class="line">alert(numbers.lastIndexOf(<span class="number">4</span>)); <span class="comment">//5</span></span><br><span class="line"></span><br><span class="line">alert(numbers.indexOf(<span class="number">4</span>, <span class="number">4</span>)); <span class="comment">//5</span></span><br><span class="line">alert(numbers.lastIndexOf(<span class="number">4</span>, <span class="number">4</span>)); <span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">"Nicholas"</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> people = [&#123; <span class="attr">name</span>: <span class="string">"Nicholas"</span> &#125;];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> morePeople = [person];</span><br><span class="line"></span><br><span class="line">alert(people.indexOf(person)); <span class="comment">//-1</span></span><br><span class="line">alert(morePeople.indexOf(person)); <span class="comment">//0</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h3><ul>
+<li><code>every()</code>:对数组中的每一项运行给定函数，如果该函数对每一项都返回 <code>true</code>，则返回<code>true</code>。</li>
+<li><code>filter()</code>:对数组中的每一项运行给定函数，返回该函数会返回<code>true</code>的项组成的数组。</li>
+<li><code>forEach()</code>:对数组中的每一项运行给定函数，无返回值。</li>
+<li><code>map()</code>:对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。</li>
+<li><code>some()</code>:对数组中的每一项运行给定函数，如果该函数对任一项返回<code>true</code>，则返回<code>true</code>。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> everyResult = numbers.every(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(everyResult); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> filterResult = numbers.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(filterResult); <span class="comment">// [3, 4, 5, 4, 3]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mapResult = numbers.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> item * <span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(mapResult); <span class="comment">// [2, 4, 6, 8, 10, 8, 6, 4, 2]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">numbers.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//执行操作   </span></span><br><span class="line">    <span class="comment">// forEach 本质上等同于使用for循环</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> someResult = numbers.some(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(someResult); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="归并方法"><a href="#归并方法" class="headerlink" title="归并方法"></a>归并方法</h3><ul>
+<li><code>reduce()</code>:迭代数组所有项，从左向右。</li>
+<li><code>reduceRight()</code>:迭代数组所有项，从右向左。</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = values.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(sum); <span class="comment">// 15</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>初次执行，<code>prev</code> = 1, <code>cur</code> = 2</li>
+<li>第二次执行，<code>prev</code> = 3, <code>cur</code> = 3</li>
+</ul>
+<p>持续到遍历所有项</p>
+<p><code>reduceRight()</code>同理。</p>
+<ul>
+<li>初次执行，<code>prev</code> = 5, <code>cur</code> = 4</li>
+<li>第二次执行，<code>prev</code> = 9, <code>cur</code> = 3</li>
+</ul>
+<p>持续到遍历所有项</p>
+
       
     </div>
 
@@ -802,190 +604,70 @@
       
     
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById(&quot;QR&quot;); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="ajycc20 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="ajycc20 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ajycc20.github.io/2019/02/24/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ajycc20">
-      <meta itemprop="description" content="一些有趣的事">
-      <meta itemprop="image" content="https://i.loli.net/2019/02/24/5c725e2889c48.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/02/24/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-02-24 15:51:21" itemprop="dateCreated datePublished" datetime="2019-02-24T15:51:21+08:00">2019-02-24</time>
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/JavaScript/" rel="tag"># JavaScript</a>
           
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/02/24/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/02/24/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-            <span id="/2019/02/24/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/26/菜鸡的Leecode学习(day01)/" rel="next" title="菜鸡的Leecode学习(day01)">
+                <i class="fa fa-chevron-left"></i> 菜鸡的Leecode学习(day01)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -995,14 +677,19 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1022,8 +709,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1145,6 +841,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#转换方法"><span class="nav-number">1.</span> <span class="nav-text">转换方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈方法"><span class="nav-number">2.</span> <span class="nav-text">栈方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列方法"><span class="nav-number">3.</span> <span class="nav-text">队列方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重排序方法"><span class="nav-number">4.</span> <span class="nav-text">重排序方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作方法"><span class="nav-number">5.</span> <span class="nav-text">操作方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位置方法"><span class="nav-number">6.</span> <span class="nav-text">位置方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代方法"><span class="nav-number">7.</span> <span class="nav-text">迭代方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归并方法"><span class="nav-number">8.</span> <span class="nav-text">归并方法</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1281,6 +994,10 @@
 
 
   
+  <script src="/js/src/scrollspy.js?v=7.0.0"></script>
+<script src="/js/src/post-details.js?v=7.0.0"></script>
+
+
 
   
 
@@ -1320,6 +1037,8 @@
 
 
 
+
+  
 
 
   
@@ -1651,38 +1370,32 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
           }
         })
         .fail(function ({ responseJSON }) {
@@ -1707,9 +1420,7 @@
             });
           };
           
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
+            addCount(Counter);
           
         });
     });
@@ -1723,14 +1434,6 @@
   
 
   
-  
-    
-      
-    
-      
-    
-      
-    
   
 
   

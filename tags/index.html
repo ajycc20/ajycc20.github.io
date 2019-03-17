@@ -458,7 +458,7 @@
               目前共计 3 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/JavaScript/" style="font-size: 30px; color: #111">JavaScript</a> <a href="/tags/Leecode/" style="font-size: 12px; color: #ccc">Leecode</a> <a href="/tags/Python/" style="font-size: 12px; color: #ccc">Python</a>
+              <a href="/tags/JavaScript/" style="font-size: 30px; color: #111">JavaScript</a> <a href="/tags/Leecode/" style="font-size: 21px; color: #6f6f6f">Leecode</a> <a href="/tags/Python/" style="font-size: 12px; color: #ccc">Python</a>
             </div>
           </div>
         
@@ -516,7 +516,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -650,7 +650,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">19k</span>
+    <span title="站点总字数">23k</span>
   
 
   
@@ -659,7 +659,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">17 分钟</span>
+    <span title="站点阅读时长">21 分钟</span>
   
 </div>
 
@@ -1301,6 +1301,9 @@
         sel.addRange(range);
         ta.setSelectionRange(0, code.length);
         var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
         
         ta.blur(); //For iOS
         $(this).blur();

@@ -630,8 +630,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/26/菜鸡的Leecode学习(day01)/" rel="prev" title="菜鸡的Leecode学习(day01)">
-                菜鸡的Leecode学习(day01) <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/26/菜鸡的Leecode学习-day01/" rel="prev" title="菜鸡的Leecode学习-day01">
+                菜鸡的Leecode学习-day01 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -707,7 +707,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -858,7 +858,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">19k</span>
+    <span title="站点总字数">23k</span>
   
 
   
@@ -867,7 +867,7 @@
       <i class="fa fa-coffee"></i>
     </span>
     
-    <span title="站点阅读时长">17 分钟</span>
+    <span title="站点阅读时长">21 分钟</span>
   
 </div>
 
@@ -1511,6 +1511,9 @@
         sel.addRange(range);
         ta.setSelectionRange(0, code.length);
         var result = document.execCommand('copy');
+        
+          if (result) $(this).text('复制成功');
+          else $(this).text('复制失败');
         
         ta.blur(); //For iOS
         $(this).blur();

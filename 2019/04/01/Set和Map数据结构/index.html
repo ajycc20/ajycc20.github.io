@@ -98,18 +98,18 @@
 
 
 
-  <meta name="description" content="鄙渣学了一学期的JavaScript，无奈并没有学通，最终还是祭出了Js红宝书，从头预习   转换方法所有对象都具有 toLocaleString()、toString()和valueOf()方法。 12345678910111213141516171819var person1 = &amp;#123;    toLocaleString : function () &amp;#123;        ret">
+  <meta name="description" content="Set基本用法Set, 类似于数组，但是成员值唯一，没有重复 12345678const s = new Set();[2, 3, 5, 4, 5, 2, 2].forEach(x =&amp;gt; s.add(x))for (let i of s) &amp;#123;  console.log(i)&amp;#125;// 2 3 5 4  向Set加入值时不会发生类型转换，所以 5 和 ” 5 ” 是两个不同的值">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript引用类型的Array类型">
-<meta property="og:url" content="https://ajycc20.github.io/2019/03/04/JavaScript引用类型的Array类型/index.html">
+<meta property="og:title" content="Set和Map数据结构">
+<meta property="og:url" content="https://ajycc20.github.io/2019/04/01/Set和Map数据结构/index.html">
 <meta property="og:site_name" content="→_→傲娇←_←">
-<meta property="og:description" content="鄙渣学了一学期的JavaScript，无奈并没有学通，最终还是祭出了Js红宝书，从头预习   转换方法所有对象都具有 toLocaleString()、toString()和valueOf()方法。 12345678910111213141516171819var person1 = &amp;#123;    toLocaleString : function () &amp;#123;        ret">
+<meta property="og:description" content="Set基本用法Set, 类似于数组，但是成员值唯一，没有重复 12345678const s = new Set();[2, 3, 5, 4, 5, 2, 2].forEach(x =&amp;gt; s.add(x))for (let i of s) &amp;#123;  console.log(i)&amp;#125;// 2 3 5 4  向Set加入值时不会发生类型转换，所以 5 和 ” 5 ” 是两个不同的值">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-10T09:16:19.101Z">
+<meta property="og:updated_time" content="2019-04-01T11:58:08.347Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript引用类型的Array类型">
-<meta name="twitter:description" content="鄙渣学了一学期的JavaScript，无奈并没有学通，最终还是祭出了Js红宝书，从头预习   转换方法所有对象都具有 toLocaleString()、toString()和valueOf()方法。 12345678910111213141516171819var person1 = &amp;#123;    toLocaleString : function () &amp;#123;        ret">
+<meta name="twitter:title" content="Set和Map数据结构">
+<meta name="twitter:description" content="Set基本用法Set, 类似于数组，但是成员值唯一，没有重复 12345678const s = new Set();[2, 3, 5, 4, 5, 2, 2].forEach(x =&amp;gt; s.add(x))for (let i of s) &amp;#123;  console.log(i)&amp;#125;// 2 3 5 4  向Set加入值时不会发生类型转换，所以 5 和 ” 5 ” 是两个不同的值">
 
 
 
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="canonical" href="https://ajycc20.github.io/2019/03/04/JavaScript引用类型的Array类型/">
+  <link rel="canonical" href="https://ajycc20.github.io/2019/04/01/Set和Map数据结构/">
 
 
 
@@ -128,7 +128,7 @@
   };
 </script>
 
-  <title>JavaScript引用类型的Array类型 | →_→傲娇←_←</title>
+  <title>Set和Map数据结构 | →_→傲娇←_←</title>
   
 
 
@@ -404,7 +404,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ajycc20.github.io/2019/03/04/JavaScript引用类型的Array类型/">
+    <link itemprop="mainEntityOfPage" href="https://ajycc20.github.io/2019/04/01/Set和Map数据结构/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ajycc20">
@@ -421,7 +421,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaScript引用类型的Array类型
+          <h1 class="post-title" itemprop="name headline">Set和Map数据结构
 
               
             
@@ -447,24 +447,12 @@
                 
               
 
-              <time title="创建时间：2019-03-04 16:30:13" itemprop="dateCreated datePublished" datetime="2019-03-04T16:30:13+08:00">2019-03-04</time>
+              <time title="创建时间：2019-04-01 18:58:14 / 修改时间：19:58:08" itemprop="dateCreated datePublished" datetime="2019-04-01T18:58:14+08:00">2019-04-01</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-03-10 17:16:19" itemprop="dateModified" datetime="2019-03-10T17:16:19+08:00">2019-03-10</time>
               
             
           </span>
@@ -500,8 +488,8 @@
                 </span>
             
                 <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/03/04/JavaScript引用类型的Array类型/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/03/04/JavaScript引用类型的Array类型/" itemprop="commentCount"></span>
+                <a href="/2019/04/01/Set和Map数据结构/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/04/01/Set和Map数据结构/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -509,7 +497,7 @@
 
           
           
-            <span id="/2019/03/04/JavaScript引用类型的Array类型/" class="leancloud_visitors" data-flag-title="JavaScript引用类型的Array类型">
+            <span id="/2019/04/01/Set和Map数据结构/" class="leancloud_visitors" data-flag-title="Set和Map数据结构">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -534,7 +522,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">4.9k</span>
+                <span title="本文字数">5.4k</span>
               
 
               
@@ -548,7 +536,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">4 分钟</span>
+                <span title="阅读时长">5 分钟</span>
               
             </div>
           
@@ -568,72 +556,146 @@
       
 
       
-        <blockquote>
-<p>鄙渣学了一学期的JavaScript，无奈并没有学通，最终还是祭出了Js红宝书，从头预习</p>
+        <h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><p>Set, 类似于数组，但是成员值唯一，没有重复</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> s = <span class="keyword">new</span> <span class="built_in">Set</span>()</span><br><span class="line"></span><br><span class="line">;[<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">2</span>].forEach(<span class="function"><span class="params">x</span> =&gt;</span> s.add(x))</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> s) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(i)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 2 3 5 4</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>向Set加入值时不会发生类型转换，所以 5 和 ” 5 ” 是两个不同的值。 Set 内部判断两个值是否相同时使用的算法叫作 “ Same-value equality飞它类似于精确相等运算符（＝＝＝），主要的区别是 NaN 等于自身，而精确相等运算符认为 NaN 不等于自身。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">set</span> = new Set()</span><br><span class="line">let a = NaN</span><br><span class="line">let b = NaN</span><br><span class="line"><span class="keyword">set</span>.add(a)</span><br><span class="line"><span class="keyword">set</span>.add(b)</span><br><span class="line"><span class="keyword">set</span> // Set &#123;<span class="literal">NaN</span>&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>两个对象总是不相等的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">set</span> = new Set()</span><br><span class="line"><span class="keyword">set</span>.add(&#123;&#125;)</span><br><span class="line"><span class="keyword">set</span>.size // 1</span><br><span class="line"><span class="keyword">set</span>.add(&#123;&#125;)</span><br><span class="line"><span class="keyword">set</span>.size // 2</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="Set实例的属性和方法"><a href="#Set实例的属性和方法" class="headerlink" title="Set实例的属性和方法"></a>Set实例的属性和方法</h4><ul>
+<li>Set.prototype.constructor: 构造函数，默认为Set函数</li>
+<li>Set.prototype.size: 返回Set实例的成员总数<blockquote>
+<p>操作方法</p>
+</blockquote>
+</li>
+<li>add(value): 添加某个值，返回Set结构本身</li>
+<li>delete(value): 删除某个值，返回布尔值</li>
+<li>has(value): 返回布尔值</li>
+<li>clear(value): 清除所有成员，无返回值</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">s.add(<span class="number">1</span>).add(<span class="number">2</span>).add(<span class="number">3</span>)</span><br><span class="line">s.size <span class="comment">// 2</span></span><br><span class="line"></span><br><span class="line">s.has(<span class="number">1</span>) <span class="comment">// true</span></span><br><span class="line">s.has(<span class="number">2</span>) <span class="comment">// true</span></span><br><span class="line">s.has(<span class="number">3</span>) <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line">s.delete(<span class="number">2</span>)</span><br><span class="line">s.has(<span class="number">2</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>数组去重<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dedupe</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(array))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dedupe([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>]) <span class="comment">// [1,2,3]</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<a id="more"></a>
+<h4 id="遍历操作"><a href="#遍历操作" class="headerlink" title="遍历操作"></a>遍历操作</h4><ul>
+<li>keys(): 返回键名的遍历器</li>
+<li>values(): 返回键值的遍历器</li>
+<li>entries(): 返回键值对的遍历器</li>
+<li>forEach(): 使用回调函数遍历每个成员</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="keyword">set</span> = new Set(['red', 'green', 'blue'])</span><br><span class="line">for (let item of <span class="keyword">set</span>.keys()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item) <span class="comment">// red green blue</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> <span class="keyword">set</span>.values()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item) <span class="comment">// red green blue</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> item <span class="keyword">of</span> <span class="keyword">set</span>.keys()) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item) </span><br><span class="line">  <span class="comment">// ["red","red"]["green","green"]["blue","blue"]</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> <span class="keyword">set</span> = new Set([1, 2, 3])</span><br><span class="line"><span class="keyword">set</span>.forEach((value, key) =&gt; console.log(value * 2)) // 2 4 6</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="WeakSet"><a href="#WeakSet" class="headerlink" title="WeakSet"></a>WeakSet</h3><h4 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h4><p>WeakSet结构类似于Set，同样是不重复值的集合。</p>
+<p>不同的是：</p>
+<ol>
+<li>WeakSet成员只能是对象，不能是其他类型的值</li>
+<li>WeakSet中的对象都是弱引用，即垃圾回收机制不考虑WeakSet对该对象的引用。</li>
+</ol>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><p><code>const ws = new WeakSet()</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> a = [[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">3</span>, <span class="number">4</span>]]</span><br><span class="line"><span class="keyword">const</span> ws = <span class="keyword">new</span> <span class="built_in">WeakSet</span>(a)</span><br><span class="line"><span class="comment">// WeakSet &#123;[1, 2], [3, 4]&#125;</span></span><br></pre></td></tr></table></figure>
+<p>WeakSet 结构有以下三个方法</p>
+<ul>
+<li>WeakSet.prototype.add(value): 添加新成员</li>
+<li>WeakSet.prototype.delete(value): 删除..</li>
+<li>WeakSet.prototype.has(value): 返回布尔值</li>
+</ul>
+<hr>
+<h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><h4 id="含义和基本用法"><a href="#含义和基本用法" class="headerlink" title="含义和基本用法"></a>含义和基本用法</h4><p>ES6提供了Map数据结构。它类似于对象，也是键值对的集合，但是“键”的范围不限于字符串，各种类型的值都可以当做键。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> m = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line"><span class="keyword">const</span> o = &#123;<span class="attr">p</span>: <span class="string">'Hello World'</span>&#125;</span><br><span class="line"></span><br><span class="line">m.set(o, <span class="string">'content'</span>)</span><br><span class="line">m.get(o) <span class="comment">// "content"</span></span><br><span class="line"></span><br><span class="line">m.has(o) <span class="comment">// true</span></span><br><span class="line">m.delete(o) <span class="comment">// true</span></span><br><span class="line">m.has(o) <span class="comment">// false</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [<span class="string">'name'</span>, <span class="string">'张三'</span>],</span><br><span class="line">  [<span class="string">'title'</span>, <span class="string">'Author'</span>]</span><br><span class="line">])</span><br><span class="line"></span><br><span class="line">map.size <span class="comment">// 2</span></span><br><span class="line">map.has(<span class="string">'name'</span>) <span class="comment">// true</span></span><br><span class="line">map.get(<span class="string">'name'</span>) <span class="comment">//  "张三"</span></span><br><span class="line">map.has(<span class="string">'title'</span>) <span class="comment">// true</span></span><br><span class="line">map.get(<span class="string">'title'</span>) <span class="comment">// "Author"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果对同一个键多次赋值，后面的值将覆盖前面的值</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line"></span><br><span class="line">map.set(<span class="number">1</span>, <span class="string">'aaa'</span>).set(<span class="number">1</span>, <span class="string">'bbb'</span>)</span><br><span class="line">map.get(<span class="number">1</span>) <span class="comment">// 'bbb'</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Map的键实际上和内存地址绑定，只要内存地址不同，就位不同的键</p>
+</blockquote>
+<blockquote>
+<p>如果Map的键是一个简单类型的值，则只要两个值严格相等， Map就将其视为一个键。包括 +0、-0 和 NaN<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">map.set(<span class="number">-0</span>, <span class="number">123</span>)</span><br><span class="line">map.get(+<span class="number">0</span>) <span class="comment">// 123</span></span><br><span class="line"></span><br><span class="line">map.set(<span class="literal">true</span>, <span class="number">1</span>)</span><br><span class="line">map.set(<span class="string">'true'</span>, <span class="number">2</span>)</span><br><span class="line">map.get(<span class="literal">true</span>) <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line">map.set(<span class="literal">undefined</span>, <span class="number">3</span>)</span><br><span class="line">map.set(<span class="literal">null</span>, <span class="number">4</span>)</span><br><span class="line">map.get(<span class="literal">undefined</span>) <span class="comment">// 3</span></span><br><span class="line"></span><br><span class="line">map.set(<span class="literal">NaN</span>, <span class="number">123</span>)</span><br><span class="line">map.get(<span class="literal">NaN</span>) <span class="comment">// 123</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h4 id="实例的属性和操作方法"><a href="#实例的属性和操作方法" class="headerlink" title="实例的属性和操作方法"></a>实例的属性和操作方法</h4><blockquote>
+<p>size 属性<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">map.set(<span class="string">'foo'</span>, <span class="literal">true</span>)</span><br><span class="line">map.set(<span class="string">'bar'</span>, <span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">map.size <span class="comment">// 2</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>set(key, value)</p>
+</blockquote>
+<p>看前面</p>
+<blockquote>
+<p>get(key)</p>
+</blockquote>
+<p>看前面</p>
+<blockquote>
+<p>has(key)</p>
+</blockquote>
+<p>看前面</p>
+<blockquote>
+<p>delete(key)</p>
+</blockquote>
+<p>看前面</p>
+<blockquote>
+<p>clear()</p>
+</blockquote>
+<p>clear方法清除所有成员，无返回<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">map.set(<span class="string">'foo'</span>, <span class="literal">true</span>)</span><br><span class="line">map.set(<span class="string">'bar'</span>, <span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">map.size <span class="comment">// 2</span></span><br><span class="line">map.clear()</span><br><span class="line">map.size <span class="comment">// 0</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="遍历方法"><a href="#遍历方法" class="headerlink" title="遍历方法"></a>遍历方法</h4><ul>
+<li>keys() …键名</li>
+<li>values() …键值</li>
+<li>entries() …所有成员</li>
+<li>forEach() …遍历Map</li>
+</ul>
+<blockquote>
+<p>Map 遍历顺序就是插入顺序</p>
+</blockquote>
+<h4 id="与其他数据结构互相转换"><a href="#与其他数据结构互相转换" class="headerlink" title="与其他数据结构互相转换"></a>与其他数据结构互相转换</h4><ul>
+<li>Map –&gt; Array</li>
+</ul>
+<p>使用扩展运算符(…)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myMap = <span class="keyword">new</span> <span class="built_in">Map</span>().set(<span class="literal">true</span>, <span class="number">7</span>).set(&#123;<span class="attr">foo</span>: <span class="number">3</span>&#125;, [<span class="string">'abc'</span>])</span><br><span class="line"></span><br><span class="line">[...myMap] <span class="comment">// [[true, 7], [&#123;foo: 3&#125;, ['abc']]]</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>Array –&gt; Map</li>
+</ul>
+<p>将数组传入Map构造函数即可<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="built_in">Map</span>([</span><br><span class="line">  [<span class="literal">true</span>, <span class="number">7</span>],</span><br><span class="line">  [&#123;<span class="attr">foo</span>: <span class="number">3</span>&#125;, [<span class="string">'abc'</span>]]</span><br><span class="line">])</span><br><span class="line"><span class="comment">// Map &#123;</span></span><br><span class="line"><span class="comment">//  true =&gt; 7,</span></span><br><span class="line"><span class="comment">//  Object &#123;foo: 3&#125; =&gt; ['abc']</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>Map –&gt; 对象</li>
+</ul>
+<p>如果Map所有键都是字符串，则可以转为对象<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strMapToObj</span>(<span class="params">strMap</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> obj = <span class="built_in">Object</span>.create(<span class="literal">null</span>)</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> [k, v] <span class="keyword">of</span> strMap) &#123;</span><br><span class="line">    obj[k] = v</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> obj</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myMap = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">  .set(<span class="string">'yes'</span>, <span class="literal">true</span>)</span><br><span class="line">  .set(<span class="string">'no'</span>, <span class="literal">false</span>)</span><br><span class="line"></span><br><span class="line">strMapToObj(myMap) <span class="comment">// &#123;yes: true, no: false&#125;</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><p>对象 –&gt; Map</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">objToStrMap</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> strMap = <span class="keyword">new</span> <span class="built_in">Map</span>()</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> k <span class="keyword">of</span> <span class="built_in">Object</span>.keys(obj)) &#123;</span><br><span class="line">    strMap.set(k, obj[k])</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> strMap</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">objToStrMap(&#123;<span class="attr">yes</span>: <span class="literal">true</span>, <span class="attr">no</span>: <span class="literal">false</span>&#125;) <span class="comment">// Map &#123;"yes" =&gt; true, "no" =&gt; false&#125;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Map –&gt; JSON</p>
+</li>
+</ul>
+<blockquote>
+<p>Map键名都为字符串  –&gt; 对象JSON<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strMapToJson</span>(<span class="params">strMap</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> JSon.stringify(strMapToObj(strMap))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myMap = <span class="keyword">new</span> <span class="built_in">Map</span>().set(<span class="string">'yes'</span>, <span class="literal">true</span>),<span class="keyword">set</span>('no', false)</span><br><span class="line"></span><br><span class="line">strMapToJson(myMap) // '&#123;<span class="string">"yes"</span>: <span class="literal">true</span>, <span class="string">"no"</span>, <span class="literal">false</span>&#125;<span class="string">'</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>Map键名有非字符串 –&gt; 数组JSON<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">mapToArrayJson</span>(<span class="params">map</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify([...map])</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> myMap = <span class="keyword">new</span> <span class="built_in">Map</span>().set(<span class="literal">true</span>, <span class="number">7</span>).set(&#123;<span class="attr">foo</span>: <span class="number">3</span>&#125;, [<span class="string">'abc'</span>])</span><br><span class="line"></span><br><span class="line">mapToArrayJson(myMap) <span class="comment">// '[[true, 7], [&#123;"foo": 3&#125;, ["abc"]]]'</span></span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li>JSON –&gt; Map<blockquote>
+<p>正常情况所有键名都为字符串</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jsonToStrMap</span>(<span class="params">jsonStr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> objToStrMap(<span class="built_in">JSON</span>.parse(jsonStr))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">jsonToStrMap(<span class="string">'&#123;"yes": true, "no", false&#125;'</span>) <span class="comment">// Map &#123;'yes' =&gt; true, 'no', false&#125;</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>整个JSON为一个数组，且每个数组成员本身又是一个具有两个成员的数组。这时，它可以一一对应的转为Map。这是数组转JSON的逆操作<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">jsonToMap</span>(<span class="params">jsonStr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Map</span>(<span class="built_in">JSON</span>.parse(jsonStr))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">jsonToMap(<span class="string">'[[true, 7], [&#123;"foo": 3&#125;, ["abc"]]]'</span>) <span class="comment">// Map &#123;true =&gt; 7, Object &#123;foo: 3&#125; =&gt; ['abc']&#125;</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
 <hr>
-<h3 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h3><p>所有对象都具有 <code>toLocaleString()</code>、<code>toString()</code>和<code>valueOf()</code>方法。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person1 = &#123;</span><br><span class="line">    toLocaleString : <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Nikolaos"</span>;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    toString : <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Nikolaos"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person2 = &#123;</span><br><span class="line">    toLocaleString : <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Grigorios"</span>;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    toString : <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"Greg"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> people = [person1, person2];</span><br><span class="line">alert(people); <span class="comment">// Nicholas,Greg</span></span><br><span class="line">alert(people.toString()); <span class="comment">// Nicholas,Greg</span></span><br><span class="line">alert(people.toLocaleString()); <span class="comment">// Nicholas,Grigorios</span></span><br></pre></td></tr></table></figure>
-<p>RT,默认调用的是<code>toString()</code>同下一行显式调用。</p>
-<p>eg:<br>可以使用<code>join()</code>更改字符串的分隔方式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</span><br><span class="line">alert(colors.join(<span class="string">"|"</span>)); <span class="comment">// red|green|blue</span></span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<hr>
-<h3 id="栈方法"><a href="#栈方法" class="headerlink" title="栈方法"></a>栈方法</h3><p>栈即是需要后进先出的，Js也为此提供了<code>push()</code>和<code>pop()</code>方法用以实现栈的LIFO(Last-In-First-Out)。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"red"</span>, <span class="string">"green"</span>);</span><br><span class="line">alert(count); <span class="comment">// 2</span></span><br><span class="line">alert(colors); <span class="comment">// red,green</span></span><br><span class="line"></span><br><span class="line">count = colors.push(<span class="string">"black"</span>);</span><br><span class="line">alert(count); <span class="comment">// 3</span></span><br><span class="line">alert(colors); <span class="comment">// red,green,black</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = colors.pop();</span><br><span class="line">alert(item); <span class="comment">// "black"</span></span><br><span class="line">alert(colors.length); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="队列方法"><a href="#队列方法" class="headerlink" title="队列方法"></a>队列方法</h3><p>队列的访问方式是FIFO(First-In-First-Out)，Js也有相应的<code>shift()</code>和<code>unshift()</code>方法。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>();</span><br><span class="line"><span class="keyword">var</span> count = colors.push(<span class="string">"red"</span>, <span class="string">"green"</span>);</span><br><span class="line">alert(count); <span class="comment">// 2</span></span><br><span class="line">alert(colors); <span class="comment">// red,green</span></span><br><span class="line"></span><br><span class="line">count = colors.push(<span class="string">"black"</span>);</span><br><span class="line">alert(count); <span class="comment">// 3</span></span><br><span class="line">alert(colors); <span class="comment">// red,green,black</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> item = colors.shift();</span><br><span class="line">alert(item); <span class="comment">// "red"</span></span><br><span class="line">alert(colors.length); <span class="comment">// 2</span></span><br><span class="line">alert(colors); <span class="comment">// green, black</span></span><br></pre></td></tr></table></figure>
-<p><code>unshift()</code>用以在数组前段添加任意个项并返回新数组长度。</p>
-<hr>
-<h3 id="重排序方法"><a href="#重排序方法" class="headerlink" title="重排序方法"></a>重排序方法</h3><p><code>reverse()</code>和<code>sort()</code>.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">values.reverse();</span><br><span class="line">alert(values); <span class="comment">// 5, 4, 3, 2, 1</span></span><br></pre></td></tr></table></figure>
-<p><code>sort()</code>的弊端.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>];</span><br><span class="line">values.sort();</span><br><span class="line">alert(values); <span class="comment">// 0, 1, 10, 15, 5</span></span><br></pre></td></tr></table></figure></p>
-<p>改进方式<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">value1, value2</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (value1 &lt; value2)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(value1 &gt; value2)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> values = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">10</span>, <span class="number">15</span>];</span><br><span class="line">values.sort(compare);</span><br><span class="line">alert(values); <span class="comment">// 0, 1, 5, 10, 15</span></span><br></pre></td></tr></table></figure></p>
-<hr>
-<h3 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h3><p><code>concat()</code>.创建当前数组的副本，并将接收到的参数添加到副本的末尾，并返回新的数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</span><br><span class="line"><span class="keyword">var</span> colors2 = colors.concat(<span class="string">"yellow"</span>, [<span class="string">"black"</span>, <span class="string">"brown"</span>]);</span><br><span class="line"></span><br><span class="line">alert(colors); <span class="comment">// red,green,blue</span></span><br><span class="line">alert(colors2); <span class="comment">// red,green,blue,yellow,black,brown</span></span><br></pre></td></tr></table></figure></p>
-<p><code>slice()</code>.基于当前数组中的一或多个项创建一个新数组。<code>slice()</code>方法可以<br>接受一或两个参数，即要返回项的起始和结束位置。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>, <span class="string">"yellow"</span>, <span class="string">"purple"</span>];</span><br><span class="line"><span class="keyword">var</span> colors2 = colors.slice(<span class="number">1</span>);</span><br><span class="line"><span class="keyword">var</span> colors3 = colors.slice(<span class="number">1</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">alert(colors2); <span class="comment">// green,blue,yellow,purple</span></span><br><span class="line">alert(colors3); <span class="comment">// green,blue,yellow</span></span><br></pre></td></tr></table></figure>
-<p> <code>splice()</code>.有如下三种方法</p>
-<ul>
-<li><code>删除</code>: 指定2个参数，要删除的第一项的位置和要删除的项数。</li>
-<li><code>插入</code>: 指定3个参数，起始位置、0(要删除的项数)和要插入的项。</li>
-<li><code>替换</code>: 指定3个参数，起始位置、要删除的项数和要插入任意数量的项。</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"green"</span>, <span class="string">"blue"</span>];</span><br><span class="line"><span class="keyword">var</span> removed = colors.splice(<span class="number">0</span>,<span class="number">1</span>); <span class="comment">// 删除第一项</span></span><br><span class="line">alert(colors); <span class="comment">// green,blue</span></span><br><span class="line">alert(removed); <span class="comment">// red，返回的数组中只包含一项</span></span><br><span class="line"></span><br><span class="line">removed = colors.splice(<span class="number">1</span>, <span class="number">0</span>, <span class="string">"yellow"</span>, <span class="string">"orange"</span>); <span class="comment">// 从位置1开始插入两项</span></span><br><span class="line">alert(colors); <span class="comment">// green,yellow,orange,blue</span></span><br><span class="line">alert(removed); <span class="comment">// 返回的是一个空数组</span></span><br><span class="line"></span><br><span class="line">removed = colors.splice(<span class="number">1</span>, <span class="number">1</span>, <span class="string">"red"</span>, <span class="string">"purple"</span>); <span class="comment">// 插入两项，删除一项</span></span><br><span class="line">alert(colors); <span class="comment">// green,red,purple,orange,blue</span></span><br><span class="line">alert(removed); <span class="comment">// yellow，返回的数组中只包含一项</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h3><p><code>indexOf()</code>和<code>lastIndexOf()</code>.均接收两个参数：要查找的项和(可选)查找起点位置的索引。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">alert(numbers.indexOf(<span class="number">4</span>)); <span class="comment">//3</span></span><br><span class="line">alert(numbers.lastIndexOf(<span class="number">4</span>)); <span class="comment">//5</span></span><br><span class="line"></span><br><span class="line">alert(numbers.indexOf(<span class="number">4</span>, <span class="number">4</span>)); <span class="comment">//5</span></span><br><span class="line">alert(numbers.lastIndexOf(<span class="number">4</span>, <span class="number">4</span>)); <span class="comment">//3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = &#123; <span class="attr">name</span>: <span class="string">"Nicholas"</span> &#125;;</span><br><span class="line"><span class="keyword">var</span> people = [&#123; <span class="attr">name</span>: <span class="string">"Nicholas"</span> &#125;];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> morePeople = [person];</span><br><span class="line"></span><br><span class="line">alert(people.indexOf(person)); <span class="comment">//-1</span></span><br><span class="line">alert(morePeople.indexOf(person)); <span class="comment">//0</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h3><ul>
-<li><code>every()</code>:对数组中的每一项运行给定函数，如果该函数对每一项都返回 <code>true</code>，则返回<code>true</code>。</li>
-<li><code>filter()</code>:对数组中的每一项运行给定函数，返回该函数会返回<code>true</code>的项组成的数组。</li>
-<li><code>forEach()</code>:对数组中的每一项运行给定函数，无返回值。</li>
-<li><code>map()</code>:对数组中的每一项运行给定函数，返回每次函数调用的结果组成的数组。</li>
-<li><code>some()</code>:对数组中的每一项运行给定函数，如果该函数对任一项返回<code>true</code>，则返回<code>true</code>。</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> everyResult = numbers.every(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(everyResult); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> filterResult = numbers.filter(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(filterResult); <span class="comment">// [3, 4, 5, 4, 3]</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> mapResult = numbers.map(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> item * <span class="number">2</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(mapResult); <span class="comment">// [2, 4, 6, 8, 10, 8, 6, 4, 2]</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">numbers.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//执行操作   </span></span><br><span class="line">    <span class="comment">// forEach 本质上等同于使用for循环</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> numbers = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> someResult = numbers.some(<span class="function"><span class="keyword">function</span>(<span class="params">item, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (item &gt; <span class="number">2</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(someResult); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="归并方法"><a href="#归并方法" class="headerlink" title="归并方法"></a>归并方法</h3><ul>
-<li><code>reduce()</code>:迭代数组所有项，从左向右。</li>
-<li><code>reduceRight()</code>:迭代数组所有项，从右向左。</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> values = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> sum = values.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, array</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">alert(sum); <span class="comment">// 15</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>初次执行，<code>prev</code> = 1, <code>cur</code> = 2</li>
-<li>第二次执行，<code>prev</code> = 3, <code>cur</code> = 3</li>
-</ul>
-<p>持续到遍历所有项</p>
-<p><code>reduceRight()</code>同理。</p>
-<ul>
-<li>初次执行，<code>prev</code> = 5, <code>cur</code> = 4</li>
-<li>第二次执行，<code>prev</code> = 9, <code>cur</code> = 3</li>
-</ul>
-<p>持续到遍历所有项</p>
+<h3 id="WeakMap"><a href="#WeakMap" class="headerlink" title="WeakMap"></a>WeakMap</h3><h4 id="含义-1"><a href="#含义-1" class="headerlink" title="含义"></a>含义</h4><p>WeakMap类似于Map，也用于生成键值对的集合。<br>不同的是：</p>
+<ol>
+<li><p>WeakMap 只接受对象作为键名(null除外),不接受其他类型的值作为键名</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> map= <span class="keyword">new</span> <span class="built_in">WeakMap</span>()</span><br><span class="line">map.set(<span class="number">1</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment">// TypeError : 1 is not aηobject!</span></span><br><span class="line">map.set(<span class="built_in">Symbol</span>(), <span class="number">2</span>)</span><br><span class="line"><span class="comment">// TypeError: Invalid value used as weak map key</span></span><br><span class="line">map.set(<span class="literal">null</span>, <span class="number">2</span>)</span><br><span class="line"><span class="comment">// TypeError: Invalid value used as weak map key</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>WeakMap的键名所指向的对象不计入垃圾回收机制</p>
+<blockquote>
+<p>WeakMap弱引用只是键名而不是键值，键值依然正常引用</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="WeakMap-的语法"><a href="#WeakMap-的语法" class="headerlink" title="WeakMap 的语法"></a>WeakMap 的语法</h4><p>WeakMap没有遍历操作(key()、values()、entries())，也没有size属性。只有4个方法:(get()、set()、has()、delete())</p>
 
       
     </div>
@@ -696,7 +758,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://ajycc20.github.io/2019/03/04/JavaScript引用类型的Array类型/" title="JavaScript引用类型的Array类型">https://ajycc20.github.io/2019/03/04/JavaScript引用类型的Array类型/</a>
+    <a href="https://ajycc20.github.io/2019/04/01/Set和Map数据结构/" title="Set和Map数据结构">https://ajycc20.github.io/2019/04/01/Set和Map数据结构/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -722,8 +784,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/26/菜鸡的Leecode学习-day01/" rel="next" title="菜鸡的Leecode学习-day01">
-                <i class="fa fa-chevron-left"></i> 菜鸡的Leecode学习-day01
+              <a href="/2019/03/20/菜鸡的Leecode学习-day04/" rel="next" title="菜鸡的Leecode学习-day04">
+                <i class="fa fa-chevron-left"></i> 菜鸡的Leecode学习-day04
               </a>
             
           </div>
@@ -731,10 +793,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/09/JavaScript继承/" rel="prev" title="JavaScript继承">
-                JavaScript继承 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -925,7 +983,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#转换方法"><span class="nav-number">1.</span> <span class="nav-text">转换方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#栈方法"><span class="nav-number">2.</span> <span class="nav-text">栈方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列方法"><span class="nav-number">3.</span> <span class="nav-text">队列方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重排序方法"><span class="nav-number">4.</span> <span class="nav-text">重排序方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作方法"><span class="nav-number">5.</span> <span class="nav-text">操作方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#位置方法"><span class="nav-number">6.</span> <span class="nav-text">位置方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迭代方法"><span class="nav-number">7.</span> <span class="nav-text">迭代方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#归并方法"><span class="nav-number">8.</span> <span class="nav-text">归并方法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Set"><span class="nav-number">1.</span> <span class="nav-text">Set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本用法"><span class="nav-number">1.1.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Set实例的属性和方法"><span class="nav-number">1.2.</span> <span class="nav-text">Set实例的属性和方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历操作"><span class="nav-number">1.3.</span> <span class="nav-text">遍历操作</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WeakSet"><span class="nav-number">2.</span> <span class="nav-text">WeakSet</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#含义"><span class="nav-number">2.1.</span> <span class="nav-text">含义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#语法"><span class="nav-number">2.2.</span> <span class="nav-text">语法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Map"><span class="nav-number">3.</span> <span class="nav-text">Map</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#含义和基本用法"><span class="nav-number">3.1.</span> <span class="nav-text">含义和基本用法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#实例的属性和操作方法"><span class="nav-number">3.2.</span> <span class="nav-text">实例的属性和操作方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遍历方法"><span class="nav-number">3.3.</span> <span class="nav-text">遍历方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#与其他数据结构互相转换"><span class="nav-number">3.4.</span> <span class="nav-text">与其他数据结构互相转换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WeakMap"><span class="nav-number">4.</span> <span class="nav-text">WeakMap</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#含义-1"><span class="nav-number">4.1.</span> <span class="nav-text">含义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#WeakMap-的语法"><span class="nav-number">4.2.</span> <span class="nav-text">WeakMap 的语法</span></a></li></ol></li></ol></div>
             
 
           </div>

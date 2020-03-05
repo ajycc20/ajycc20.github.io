@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>%2F2019%2F07%2F19%2Fblog%2F</url>
+    <title><![CDATA['Demo posts']]></title>
+    <url>%2F2020%2F03%2F05%2FDemo-posts%2F</url>
     <content type="text"><![CDATA[View the SpiderX-Frontend Demo Demo: SpiderX-Frontend Source: SpiderX-Frontend View the easy-css-layout Demo Demo: easy-css-layout Source: easy-css-layout View the museum Demo Demo: museum Source: museum]]></content>
+      <categories>
+        <category>Demo</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>Demo</tag>
+      </tags>
   </entry>
 </search>

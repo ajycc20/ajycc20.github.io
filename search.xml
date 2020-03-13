@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[插件-getBingUrl]]></title>
+    <url>%2F2020%2F03%2F13%2F%E6%8F%92%E4%BB%B6-getBingUrl%2F</url>
+    <content type="text"><![CDATA[前言不知道为什么，之前网站获取必应壁纸的请求突然失效了，菜鸡如我又不怎么会Php，思前想后，决定写个脚本用来暂时替代了 正文脚本本身其实很简单，只有三步 一、创建按钮这里用// @require JQuery 引入了JQuery，方便操作DOM所以第一步的操作也很简单1$('input[type="submit"]').after() 我用了上面的方法将新的按钮附加在了原有的后面 二、发起请求 但是到第二部这里，碰到了常有的问题 CORS跨域请求 想来想去，包括谷歌浏览器跨域插件，或者JQ的跨域等，都没有较好的方法。这时候我突发奇想，搜索了下油猴跨域，突然就get到了GM_xmlhttpRequest 使用// @grant GM_xmlhttpRequest 引入后123456789// 我将请求写到了点击事件里GM_xmlhttpRequest(&#123; type: 'GET', url: 'https://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1', headers: &#123; "Content-Type": "application/json" &#125;, onload: function(res) &#123; console.log(res.responseText) &#125;&#125;) 这里直接控制台输出确保数据无误 三、替换链接 替换链接其实很简单 不过首先要先获得返回的JSON数据中对应的url 这里使用了eval将JSON字符串解析为JSON数据1234var json = eval('(' + res.responseText + ')') // JSON 对象var url = json['images'][0]['url'] // 提取urlurl = 'https://cn.bing.com' + url // 拼接域名document.getElementsByTagName('input')[0].value = url // 替换链接 结语 至此大功告成，提交一下链接就可以替换网站背景图片了]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+      <tags>
+        <tag>tampermonkey</tag>
+        <tag>JavaScript</tag>
+        <tag>Bing</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[初探electron + vue]]></title>
     <url>%2F2020%2F03%2F10%2F%E5%88%9D%E6%8E%A2electron-vue%2F</url>
     <content type="text"><![CDATA[前言 之前考虑了很久准备使用electron练练手，写一个桌面应用。一开始打算使用electron-vue直接创建，无奈该项目所使用的版本依赖太过古老，只能自己创建了。 构建过程 使用vue-cli初始化项目12# vue-cli初始化vue create -d my-project 安装electron12345# electron installnpm install electron -D or yarn add electron -D# 但是这里建议使用 cnpm install electron -D# 原因是前两者貌似安装下来都会在构建时候出现问题 配置eslint 启动electron 首先在项目根目录下创建electron启动文件 不建议使用electron.js命名123456789101112131415161718192021222324252627282930313233343536373839404142// elec.jsconst &#123; app, BrowserWindow &#125; = require('electron')function createWindow() &#123; // 创建浏览器窗口 const win = new BrowserWindow(&#123; width: 800, height: 600, webPreferences: &#123; nodeIntegration: true &#125; &#125;) // 这里注意入口文件是vue打包后的dist下index.html // 加载 index.html win.loadFile('dist/index.html') // 打开开发者工具 win.webContents.openDevTools()&#125;// This method will be called when Electron has finished// initialization and is ready to create browser windows.// 部分 API 在 ready 事件触发后才能使用。app.whenReady().then(createWindow)// Quit when all windows are closed.app.on('window-all-closed', () =&gt; &#123; // 在 macOS 上，除非用户用 Cmd + Q 确定地退出， // 否则绝大部分应用及其菜单栏会保持激活。 if (process.platform !== 'darwin') &#123; app.quit() &#125;&#125;)app.on('activate', () =&gt; &#123; // 在macOS上，当单击dock图标并且没有其他窗口打开时， // 通常在应用程序中重新创建一个窗口。 if (BrowserWindow.getAllWindows().length === 0) &#123; createWindow() &#125;&#125;) 简单配置下vue.config.js12345678910111213141516171819'use strict'const path = require('path')function resolve(dir) &#123; return path.join(__dirname, dir)&#125;// 注意这里publicPath: './'module.exports = &#123; publicPath: './', outputDir: 'dist', assetsDir: 'static', configureWebpack: &#123; resolve: &#123; alias: &#123; '@': resolve('src') &#125; &#125; &#125;&#125; 修改package.json12345..."script": &#123; "electron_dev": "npm run build &amp;&amp; electron elec.js"&#125;... 预览 不出问题在终端运行 npm run electron_dev 即可弹出GUI]]></content>

@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://ajycc20.github.io">
-  <title>初探electron + vue | →_→傲娇→_→</title>
+  <title>插件-getBingUrl | →_→傲娇→_→</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言 之前考虑了很久准备使用electron练练手，写一个桌面应用。一开始打算使用electron-vue直接创建，无奈该项目所使用的版本依赖太过古老，只能自己创建了。">
-<meta name="keywords" content="Vue,Electron">
+  <meta name="description" content="前言不知道为什么，之前网站获取必应壁纸的请求突然失效了，菜鸡如我又不怎么会Php，思前想后，决定写个脚本用来暂时替代了 正文脚本本身其实很简单，只有三步 一、创建按钮这里用// @require JQuery 引入了JQuery，方便操作DOM所以第一步的操作也很简单1$(&apos;input[type=&quot;submit&quot;]&apos;).after()  我用了上面的方法将新的按钮附加在了原有的后面  二、发起请求">
+<meta name="keywords" content="tampermonkey,JavaScript,Bing">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初探electron + vue">
-<meta property="og:url" content="https://ajycc20.github.io/2020/03/10/初探electron-vue/index.html">
+<meta property="og:title" content="插件-getBingUrl">
+<meta property="og:url" content="https://ajycc20.github.io/2020/03/13/插件-getBingUrl/index.html">
 <meta property="og:site_name" content="→_→傲娇→_→">
-<meta property="og:description" content="前言 之前考虑了很久准备使用electron练练手，写一个桌面应用。一开始打算使用electron-vue直接创建，无奈该项目所使用的版本依赖太过古老，只能自己创建了。">
+<meta property="og:description" content="前言不知道为什么，之前网站获取必应壁纸的请求突然失效了，菜鸡如我又不怎么会Php，思前想后，决定写个脚本用来暂时替代了 正文脚本本身其实很简单，只有三步 一、创建按钮这里用// @require JQuery 引入了JQuery，方便操作DOM所以第一步的操作也很简单1$(&apos;input[type=&quot;submit&quot;]&apos;).after()  我用了上面的方法将新的按钮附加在了原有的后面  二、发起请求">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-10T07:26:13.494Z">
+<meta property="og:updated_time" content="2020-03-13T12:58:33.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初探electron + vue">
-<meta name="twitter:description" content="前言 之前考虑了很久准备使用electron练练手，写一个桌面应用。一开始打算使用electron-vue直接创建，无奈该项目所使用的版本依赖太过古老，只能自己创建了。">
+<meta name="twitter:title" content="插件-getBingUrl">
+<meta name="twitter:description" content="前言不知道为什么，之前网站获取必应壁纸的请求突然失效了，菜鸡如我又不怎么会Php，思前想后，决定写个脚本用来暂时替代了 正文脚本本身其实很简单，只有三步 一、创建按钮这里用// @require JQuery 引入了JQuery，方便操作DOM所以第一步的操作也很简单1$(&apos;input[type=&quot;submit&quot;]&apos;).after()  我用了上面的方法将新的按钮附加在了原有的后面  二、发起请求">
   
     <link rel="alternative" href="/atom.xml" title="→_→傲娇→_→" type="application/atom+xml">
   
@@ -180,52 +180,47 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-初探electron-vue" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-插件-getBingUrl" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      初探electron + vue
+      插件-getBingUrl
     </h1>
   
 
         
-        <a href="/2020/03/10/初探electron-vue/" class="archive-article-date">
-  	<time datetime="2020-03-10T07:07:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
+        <a href="/2020/03/13/插件-getBingUrl/" class="archive-article-date">
+  	<time datetime="2020-03-13T12:43:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
-<p>之前考虑了很久准备使用<code>electron</code>练练手，写一个桌面应用。一开始打算使用<code>electron-vue</code>直接创建，无奈该项目所使用的版本依赖太过古老，只能自己创建了。</p>
-</blockquote>
-<hr>
-<a id="more"></a>
-<h2 id="构建过程"><a href="#构建过程" class="headerlink" title="构建过程"></a>构建过程</h2><blockquote>
-<p>使用vue-cli初始化项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vue-cli初始化</span></span><br><span class="line">vue create -d my-project</span><br></pre></td></tr></table></figure></p>
-</blockquote>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道为什么，之前网站获取必应壁纸的请求突然失效了，菜鸡如我又不怎么会Php，思前想后，决定写个脚本用来暂时替代了</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>脚本本身其实很简单，只有三步</p>
+<h3 id="一、创建按钮"><a href="#一、创建按钮" class="headerlink" title="一、创建按钮"></a>一、创建按钮</h3><p>这里用<code>// @require JQuery</code> 引入了JQuery，方便操作DOM<br>所以第一步的操作也很简单<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'input[type="submit"]'</span>).after()</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>安装electron<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># electron install</span></span><br><span class="line">npm install electron -D or yarn add electron -D</span><br><span class="line"></span><br><span class="line"><span class="comment"># 但是这里建议使用 cnpm install electron -D</span></span><br><span class="line"><span class="comment"># 原因是前两者貌似安装下来都会在构建时候出现问题</span></span><br></pre></td></tr></table></figure></p>
+<p>我用了上面的方法将新的按钮附加在了原有的后面</p>
 </blockquote>
+<h3 id="二、发起请求"><a href="#二、发起请求" class="headerlink" title="二、发起请求"></a>二、发起请求</h3><blockquote>
+<p>但是到第二部这里，碰到了常有的问题  CORS跨域请求</p>
+</blockquote>
+<p>想来想去，包括谷歌浏览器跨域插件，或者JQ的跨域等，都没有较好的方法。这时候我突发奇想，搜索了下油猴跨域，突然就get到了<code>GM_xmlhttpRequest</code></p>
+<p>使用<code>// @grant GM_xmlhttpRequest</code> 引入后<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 我将请求写到了点击事件里</span></span><br><span class="line">GM_xmlhttpRequest(&#123;</span><br><span class="line">  type: <span class="string">'GET'</span>,</span><br><span class="line">  url: <span class="string">'https://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1'</span>,</span><br><span class="line">  headers: &#123; <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span> &#125;,</span><br><span class="line">  onload: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res.responseText)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <blockquote>
-<p>配置eslint</p>
+<p>这里直接控制台输出确保数据无误</p>
 </blockquote>
-<h2 id="启动electron"><a href="#启动electron" class="headerlink" title="启动electron"></a>启动electron</h2><blockquote>
-<p>首先在项目根目录下创建electron启动文件</p>
-<p>不建议使用<code>electron.js</code>命名<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// elec.js</span></span><br><span class="line"><span class="keyword">const</span> &#123; app, BrowserWindow &#125; = <span class="built_in">require</span>(<span class="string">'electron'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createWindow</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 创建浏览器窗口</span></span><br><span class="line">  <span class="keyword">const</span> win = <span class="keyword">new</span> BrowserWindow(&#123;</span><br><span class="line">    width: <span class="number">800</span>,</span><br><span class="line">    height: <span class="number">600</span>,</span><br><span class="line">    webPreferences: &#123;</span><br><span class="line">      nodeIntegration: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这里注意入口文件是vue打包后的dist下index.html</span></span><br><span class="line">  <span class="comment">// 加载 index.html</span></span><br><span class="line">  win.loadFile(<span class="string">'dist/index.html'</span>)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 打开开发者工具</span></span><br><span class="line">  win.webContents.openDevTools()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// This method will be called when Electron has finished</span></span><br><span class="line"><span class="comment">// initialization and is ready to create browser windows.</span></span><br><span class="line"><span class="comment">// 部分 API 在 ready 事件触发后才能使用。</span></span><br><span class="line">app.whenReady().then(createWindow)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Quit when all windows are closed.</span></span><br><span class="line">app.on(<span class="string">'window-all-closed'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 在 macOS 上，除非用户用 Cmd + Q 确定地退出，</span></span><br><span class="line">  <span class="comment">// 否则绝大部分应用及其菜单栏会保持激活。</span></span><br><span class="line">  <span class="keyword">if</span> (process.platform !== <span class="string">'darwin'</span>) &#123;</span><br><span class="line">    app.quit()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">app.on(<span class="string">'activate'</span>, () =&gt; &#123;</span><br><span class="line">  <span class="comment">// 在macOS上，当单击dock图标并且没有其他窗口打开时，</span></span><br><span class="line">  <span class="comment">// 通常在应用程序中重新创建一个窗口。</span></span><br><span class="line">  <span class="keyword">if</span> (BrowserWindow.getAllWindows().length === <span class="number">0</span>) &#123;</span><br><span class="line">    createWindow()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="三、替换链接"><a href="#三、替换链接" class="headerlink" title="三、替换链接"></a>三、替换链接</h3><blockquote>
+<p>替换链接其实很简单</p>
 </blockquote>
-<blockquote>
-<p>简单配置下vue.config.js<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span></span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">'path'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">resolve</span>(<span class="params">dir</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> path.join(__dirname, dir)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 注意这里publicPath: './'</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  publicPath: <span class="string">'./'</span>,</span><br><span class="line">  outputDir: <span class="string">'dist'</span>,</span><br><span class="line">  assetsDir: <span class="string">'static'</span>,</span><br><span class="line">  configureWebpack: &#123;</span><br><span class="line">    resolve: &#123;</span><br><span class="line">      alias: &#123;</span><br><span class="line">        <span class="string">'@'</span>: resolve(<span class="string">'src'</span>)</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<blockquote>
-<p>修改package.json<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">"script": &#123;</span><br><span class="line">  "electron_dev": "npm run build &amp;&amp; electron elec.js"</span><br><span class="line">&#125;</span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><blockquote>
-<p>不出问题在终端运行 npm run electron_dev 即可弹出GUI</p>
+<p>不过首先要先获得返回的JSON数据中对应的url</p>
+<p>这里使用了<code>eval</code>将JSON字符串解析为JSON数据<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> json = <span class="built_in">eval</span>(<span class="string">'('</span> + res.responseText + <span class="string">')'</span>) <span class="comment">// JSON 对象</span></span><br><span class="line"><span class="keyword">var</span> url = json[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'url'</span>] <span class="comment">// 提取url</span></span><br><span class="line">url = <span class="string">'https://cn.bing.com'</span> + url <span class="comment">// 拼接域名</span></span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">'input'</span>)[<span class="number">0</span>].value = url <span class="comment">// 替换链接</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><blockquote>
+<p>至此大功告成，提交一下链接就可以替换网站背景图片了</p>
 </blockquote>
 
       
@@ -271,11 +266,15 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">tampermonkey</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Electron</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bing</a>
         		</li>
       		
 		</ul>
@@ -287,11 +286,7 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Vue//" class="article-tag-list-link color4">Vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/Vue/Electron//" class="article-tag-list-link color4">Electron</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		
 		</ul>
@@ -346,7 +341,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://ajycc20.github.io/2020/03/10/初探electron-vue/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ajycc20.github.io/2020/03/13/插件-getBingUrl/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -360,18 +355,9 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2020/03/13/插件-getBingUrl/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          插件-getBingUrl
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/03/05/Demo-posts/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">&#39;Demo posts&#39;</div>
+    <a href="/2020/03/10/初探electron-vue/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">初探electron + vue</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -410,7 +396,7 @@ var _hmt = _hmt || [];
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "https://ajycc20.github.io/2020/03/10/初探electron-vue/",
+  id: "https://ajycc20.github.io/2020/03/13/插件-getBingUrl/",
   owner: 'ajycc20',
   repo: 'ajycc20.github.io',
   oauth: {

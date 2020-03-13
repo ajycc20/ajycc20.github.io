@@ -180,6 +180,120 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-插件-getBingUrl" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/13/插件-getBingUrl/">插件-getBingUrl</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/13/插件-getBingUrl/" class="archive-article-date">
+  	<time datetime="2020-03-13T12:43:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>不知道为什么，之前网站获取必应壁纸的请求突然失效了，菜鸡如我又不怎么会Php，思前想后，决定写个脚本用来暂时替代了</p>
+<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>脚本本身其实很简单，只有三步</p>
+<h3 id="一、创建按钮"><a href="#一、创建按钮" class="headerlink" title="一、创建按钮"></a>一、创建按钮</h3><p>这里用<code>// @require JQuery</code> 引入了JQuery，方便操作DOM<br>所以第一步的操作也很简单<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'input[type="submit"]'</span>).after()</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>我用了上面的方法将新的按钮附加在了原有的后面</p>
+</blockquote>
+<h3 id="二、发起请求"><a href="#二、发起请求" class="headerlink" title="二、发起请求"></a>二、发起请求</h3><blockquote>
+<p>但是到第二部这里，碰到了常有的问题  CORS跨域请求</p>
+</blockquote>
+<p>想来想去，包括谷歌浏览器跨域插件，或者JQ的跨域等，都没有较好的方法。这时候我突发奇想，搜索了下油猴跨域，突然就get到了<code>GM_xmlhttpRequest</code></p>
+<p>使用<code>// @grant GM_xmlhttpRequest</code> 引入后<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 我将请求写到了点击事件里</span></span><br><span class="line">GM_xmlhttpRequest(&#123;</span><br><span class="line">  type: <span class="string">'GET'</span>,</span><br><span class="line">  url: <span class="string">'https://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1'</span>,</span><br><span class="line">  headers: &#123; <span class="string">"Content-Type"</span>: <span class="string">"application/json"</span> &#125;,</span><br><span class="line">  onload: <span class="function"><span class="keyword">function</span>(<span class="params">res</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res.responseText)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>这里直接控制台输出确保数据无误</p>
+</blockquote>
+<h3 id="三、替换链接"><a href="#三、替换链接" class="headerlink" title="三、替换链接"></a>三、替换链接</h3><blockquote>
+<p>替换链接其实很简单</p>
+</blockquote>
+<p>不过首先要先获得返回的JSON数据中对应的url</p>
+<p>这里使用了<code>eval</code>将JSON字符串解析为JSON数据<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> json = <span class="built_in">eval</span>(<span class="string">'('</span> + res.responseText + <span class="string">')'</span>) <span class="comment">// JSON 对象</span></span><br><span class="line"><span class="keyword">var</span> url = json[<span class="string">'images'</span>][<span class="number">0</span>][<span class="string">'url'</span>] <span class="comment">// 提取url</span></span><br><span class="line">url = <span class="string">'https://cn.bing.com'</span> + url <span class="comment">// 拼接域名</span></span><br><span class="line"><span class="built_in">document</span>.getElementsByTagName(<span class="string">'input'</span>)[<span class="number">0</span>].value = url <span class="comment">// 替换链接</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><blockquote>
+<p>至此大功告成，提交一下链接就可以替换网站背景图片了</p>
+</blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">tampermonkey</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Bing</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/13/插件-getBingUrl/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-初探electron-vue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -480,6 +594,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Demo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">tampermonkey</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Bing</a>
               </li>
             
             <div class="clearfix"></div>

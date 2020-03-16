@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ajycc20.github.io/"/>
-  <updated>2020-03-13T13:00:46.181Z</updated>
+  <updated>2020-03-16T05:36:36.027Z</updated>
   <id>https://ajycc20.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>win10计划任务-autocheckin脚本</title>
+    <link href="https://ajycc20.github.io/2020/03/16/win10%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1-autocheckin%E8%84%9A%E6%9C%AC/"/>
+    <id>https://ajycc20.github.io/2020/03/16/win10计划任务-autocheckin脚本/</id>
+    <published>2020-03-16T05:35:23.000Z</published>
+    <updated>2020-03-16T05:36:36.027Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="https://ajycc20.github.io/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="https://ajycc20.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>插件-getBingUrl</title>
@@ -34,9 +52,9 @@
       <category term="JavaScript" scheme="https://ajycc20.github.io/categories/JavaScript/"/>
     
     
-      <category term="tampermonkey" scheme="https://ajycc20.github.io/tags/tampermonkey/"/>
-    
       <category term="JavaScript" scheme="https://ajycc20.github.io/tags/JavaScript/"/>
+    
+      <category term="tampermonkey" scheme="https://ajycc20.github.io/tags/tampermonkey/"/>
     
       <category term="Bing" scheme="https://ajycc20.github.io/tags/Bing/"/>
     

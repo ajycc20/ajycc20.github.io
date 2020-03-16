@@ -22,6 +22,10 @@
 <meta name="theme-color" content="#222">
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -131,6 +135,17 @@
 
 
 
+
+  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-146866419-1');
+    }
+  </script>
 
 
 
@@ -612,7 +627,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="https://i.loli.net/2019/02/24/5c725e2889c48.jpg" alt="ajycc20">
+              <img class="site-author-image" itemprop="image" src="https://i.endpot.com/image/L5MLK/avatar.jpg" alt="ajycc20">
             
               <p class="site-author-name" itemprop="name">ajycc20</p>
               <p class="site-description motion-element" itemprop="description">天真不谙世事之险恶...</p>
@@ -780,7 +795,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">4k</span>
   
 
   
@@ -825,7 +840,7 @@
 		minutes - 0-59之间的整数，做为date对象的分钟数
 		seconds - 0-59之间的整数，做为date对象的秒数
 		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-		var t1 = Date.UTC(2019,02,24,16,00,00); //北京时间2018-2-13 00:00:00
+		var t1 = Date.UTC(2018,09,18,12,00,00); //北京时间2018-2-13 00:00:00
 		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
 		var diff = t2-t1;
 		var diffYears = Math.floor(diff/years);
@@ -993,7 +1008,7 @@
   new Valine({
     el: '#comments',
     verify: false,
-    notify: false,
+    notify: true,
     appId: 'mSOTLIRm9e2DPuWQGXN3pyDv-gzGzoHsz',
     appKey: 'rvnhiOb49AGWvJxSQD6kadoo',
     placeholder: 'Just go go',
@@ -1353,6 +1368,26 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "bottomCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
 
   
 

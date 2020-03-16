@@ -22,6 +22,10 @@
 <meta name="theme-color" content="#222">
 
 
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
 
 
 
@@ -98,18 +102,18 @@
 
 
 
-  <meta name="description" content="天真不谙世事之险恶...">
+  <meta name="description" content="前言 前两天脚本写好后就像跑起来测试下，无奈之前的vultr小鸡已经弃之不用了，手头又没有多余的服务器，只好本地跑跑看了">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="win10计划任务-autocheckin脚本">
 <meta property="og:url" content="https://ajycc20.github.io/2020/03/16/win10计划任务-autocheckin脚本/index.html">
 <meta property="og:site_name" content="→_→傲娇→_→">
-<meta property="og:description" content="天真不谙世事之险恶...">
+<meta property="og:description" content="前言 前两天脚本写好后就像跑起来测试下，无奈之前的vultr小鸡已经弃之不用了，手头又没有多余的服务器，只好本地跑跑看了">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-03-16T05:36:36.027Z">
+<meta property="og:updated_time" content="2020-03-16T06:21:45.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="win10计划任务-autocheckin脚本">
-<meta name="twitter:description" content="天真不谙世事之险恶...">
+<meta name="twitter:description" content="前言 前两天脚本写好后就像跑起来测试下，无奈之前的vultr小鸡已经弃之不用了，手头又没有多余的服务器，只好本地跑跑看了">
 
 
 
@@ -133,6 +137,17 @@
 
 
 
+
+  <script async src="//www.googletagmanager.com/gtag/js?id=[object Object]"></script>
+  <script>
+    var host = window.location.hostname;
+    if (host !== "localhost" || !true) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-146866419-1');
+    }
+  </script>
 
 
 
@@ -409,7 +424,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ajycc20">
       <meta itemprop="description" content="天真不谙世事之险恶...">
-      <meta itemprop="image" content="https://i.loli.net/2019/02/24/5c725e2889c48.jpg">
+      <meta itemprop="image" content="https://i.endpot.com/image/L5MLK/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -447,7 +462,7 @@
                 
               
 
-              <time title="创建时间：2020-03-16 13:35:23 / 修改时间：13:36:36" itemprop="dateCreated datePublished" datetime="2020-03-16T13:35:23+08:00">2020-03-16</time>
+              <time title="创建时间：2020-03-16 13:35:23 / 修改时间：14:21:45" itemprop="dateCreated datePublished" datetime="2020-03-16T13:35:23+08:00">2020-03-16</time>
             
 
             
@@ -522,7 +537,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">0</span>
+                <span title="本文字数">482</span>
               
 
               
@@ -556,7 +571,22 @@
       
 
       
-        
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>前两天脚本写好后就像跑起来测试下，无奈之前的vultr小鸡已经弃之不用了，手头又没有多余的服务器，只好本地跑跑看了</p>
+</blockquote>
+<hr>
+<a id="more"></a>
+<h2 id="设置自启动脚本"><a href="#设置自启动脚本" class="headerlink" title="设置自启动脚本"></a>设置自启动脚本</h2><h3 id="配置bat脚本"><a href="#配置bat脚本" class="headerlink" title="配置bat脚本"></a>配置bat脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node auto-checkin.js</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>这部分很简单，只要运行bat可以让脚本执行一次就ok</p>
+</blockquote>
+<h3 id="配置计划任务"><a href="#配置计划任务" class="headerlink" title="配置计划任务"></a>配置计划任务</h3><p><code>Win</code> + <code>X</code> 选择<code>计算机管理(G)</code>打开之后，在系统工具栏目选择<code>任务计划程序</code></p>
+<p>最右侧选择<code>创建基本任务</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 创建基本任务</span></span><br><span class="line"></span><br><span class="line">名称：title</span><br><span class="line">描述：description</span><br><span class="line"></span><br><span class="line"><span class="comment"># 触发器</span></span><br><span class="line"></span><br><span class="line">这里选择每天</span><br><span class="line"></span><br><span class="line"><span class="comment"># 操作</span></span><br><span class="line"></span><br><span class="line">这里选择启动程序</span><br><span class="line"></span><br><span class="line">程序或脚本： test.bat <span class="comment"># 浏览选择到你上面创建的bat脚本</span></span><br><span class="line">添加参数：值同上</span><br><span class="line">起始于：值为上面的目录</span><br><span class="line"></span><br><span class="line"><span class="comment"># 完成</span></span><br><span class="line"></span><br><span class="line">完成后在任务计划程序库找到刚刚创建的程序</span><br><span class="line"></span><br><span class="line">选择右侧的属性</span><br><span class="line"></span><br><span class="line">在常规页面：</span><br><span class="line">选择不管用户是否登录都要运行（不勾选其子选项）</span><br><span class="line"></span><br><span class="line">勾选使用最高权限运行</span><br><span class="line"></span><br><span class="line">配置选择： Windows10</span><br></pre></td></tr></table></figure>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><blockquote>
+<p>一开始计划任务没配置好，运行不见代码效果，后来才一点点研究改好了，顺便重构了下前面的代码2333</p>
+</blockquote>
+
       
     </div>
 
@@ -638,6 +668,26 @@
 
       
       
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+          </div>
+        
+        </div>
+      
       
 
       
@@ -700,12 +750,21 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="https://i.loli.net/2019/02/24/5c725e2889c48.jpg" alt="ajycc20">
+              <img class="site-author-image" itemprop="image" src="https://i.endpot.com/image/L5MLK/avatar.jpg" alt="ajycc20">
             
               <p class="site-author-name" itemprop="name">ajycc20</p>
               <p class="site-description motion-element" itemprop="description">天真不谙世事之险恶...</p>
@@ -845,6 +904,23 @@
       </div>
 
       
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置自启动脚本"><span class="nav-number">2.</span> <span class="nav-text">设置自启动脚本</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置bat脚本"><span class="nav-number">2.1.</span> <span class="nav-text">配置bat脚本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置计划任务"><span class="nav-number">2.2.</span> <span class="nav-text">配置计划任务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
       
 
@@ -873,7 +949,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">3k</span>
+    <span title="站点总字数">4k</span>
   
 
   
@@ -918,7 +994,7 @@
 		minutes - 0-59之间的整数，做为date对象的分钟数
 		seconds - 0-59之间的整数，做为date对象的秒数
 		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-		var t1 = Date.UTC(2019,02,24,16,00,00); //北京时间2018-2-13 00:00:00
+		var t1 = Date.UTC(2018,09,18,12,00,00); //北京时间2018-2-13 00:00:00
 		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
 		var diff = t2-t1;
 		var diffYears = Math.floor(diff/years);
@@ -1090,7 +1166,7 @@
   new Valine({
     el: '#comments',
     verify: false,
-    notify: false,
+    notify: true,
     appId: 'mSOTLIRm9e2DPuWQGXN3pyDv-gzGzoHsz',
     appKey: 'rvnhiOb49AGWvJxSQD6kadoo',
     placeholder: 'Just go go',
@@ -1452,6 +1528,26 @@
   
 
   
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "bottomCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
 
   
 

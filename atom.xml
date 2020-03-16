@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ajycc20.github.io/"/>
-  <updated>2020-03-16T05:36:36.027Z</updated>
+  <updated>2020-03-16T06:21:45.975Z</updated>
   <id>https://ajycc20.github.io/</id>
   
   <author>
@@ -21,9 +21,16 @@
     <link href="https://ajycc20.github.io/2020/03/16/win10%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1-autocheckin%E8%84%9A%E6%9C%AC/"/>
     <id>https://ajycc20.github.io/2020/03/16/win10计划任务-autocheckin脚本/</id>
     <published>2020-03-16T05:35:23.000Z</published>
-    <updated>2020-03-16T05:36:36.027Z</updated>
+    <updated>2020-03-16T06:21:45.975Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote><p>前两天脚本写好后就像跑起来测试下，无奈之前的vultr小鸡已经弃之不用了，手头又没有多余的服务器，只好本地跑跑看了</p></blockquote><hr><a id="more"></a><h2 id="设置自启动脚本"><a href="#设置自启动脚本" class="headerlink" title="设置自启动脚本"></a>设置自启动脚本</h2><h3 id="配置bat脚本"><a href="#配置bat脚本" class="headerlink" title="配置bat脚本"></a>配置bat脚本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node auto-checkin.js</span><br></pre></td></tr></table></figure><blockquote><p>这部分很简单，只要运行bat可以让脚本执行一次就ok</p></blockquote><h3 id="配置计划任务"><a href="#配置计划任务" class="headerlink" title="配置计划任务"></a>配置计划任务</h3><p><code>Win</code> + <code>X</code> 选择<code>计算机管理(G)</code>打开之后，在系统工具栏目选择<code>任务计划程序</code></p><p>最右侧选择<code>创建基本任务</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 创建基本任务</span></span><br><span class="line"></span><br><span class="line">名称：title</span><br><span class="line">描述：description</span><br><span class="line"></span><br><span class="line"><span class="comment"># 触发器</span></span><br><span class="line"></span><br><span class="line">这里选择每天</span><br><span class="line"></span><br><span class="line"><span class="comment"># 操作</span></span><br><span class="line"></span><br><span class="line">这里选择启动程序</span><br><span class="line"></span><br><span class="line">程序或脚本： test.bat <span class="comment"># 浏览选择到你上面创建的bat脚本</span></span><br><span class="line">添加参数：值同上</span><br><span class="line">起始于：值为上面的目录</span><br><span class="line"></span><br><span class="line"><span class="comment"># 完成</span></span><br><span class="line"></span><br><span class="line">完成后在任务计划程序库找到刚刚创建的程序</span><br><span class="line"></span><br><span class="line">选择右侧的属性</span><br><span class="line"></span><br><span class="line">在常规页面：</span><br><span class="line">选择不管用户是否登录都要运行（不勾选其子选项）</span><br><span class="line"></span><br><span class="line">勾选使用最高权限运行</span><br><span class="line"></span><br><span class="line">配置选择： Windows10</span><br></pre></td></tr></table></figure><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><blockquote><p>一开始计划任务没配置好，运行不见代码效果，后来才一点点研究改好了，顺便重构了下前面的代码2333</p></blockquote>]]></content>
     
     <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;前两天脚本写好后就像跑起来测试下，无奈之前的vultr小鸡已经弃之不用了，手头又没有多余的服务器，只好本地跑跑看了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
     
     </summary>
     

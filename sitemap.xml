@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ajycc20.github.io/2020/03/05/Demo-posts/</loc>
+    
+    <lastmod>2020-04-22T06:37:24.246Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ajycc20.github.io/2020/03/20/auto-givebouns%EF%BC%8C%E8%87%AA%E5%8A%A8%E5%8F%91%E8%B1%86%E8%84%9A%E6%9C%AC/</loc>
     
     <lastmod>2020-03-20T13:12:06.648Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://ajycc20.github.io/2020/03/10/%E5%88%9D%E6%8E%A2electron-vue/</loc>
     
     <lastmod>2020-03-10T07:26:13.494Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ajycc20.github.io/2020/03/05/Demo-posts/</loc>
-    
-    <lastmod>2020-03-05T13:48:14.300Z</lastmod>
     
   </url>
   

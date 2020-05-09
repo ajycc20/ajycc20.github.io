@@ -1,64 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[auto-givebouns，自动发豆脚本]]></title>
-    <url>%2F2020%2F03%2F20%2Fauto-givebouns%EF%BC%8C%E8%87%AA%E5%8A%A8%E5%8F%91%E8%B1%86%E8%84%9A%E6%9C%AC%2F</url>
-    <content type="text"><![CDATA[前言 不甘心啊，还是没有到彻底的解放双手，只完成了发布帖子部分，那咋办嘛，那就只能再写个脚本来进行下一步操作了 自动发豆脚本的编写 其实整体逻辑理顺之后，问题也没多少，无外乎获取到帖子的url，获取到帖子的楼层数，触发发豆提交请求三部分 获取帖子Url首先是定义了全局变量整个分区的url用作抓取url 关键代码如下123456789101112let rePage = /&lt;a href="\?.+?(\d+).+?(\d+).+?&gt;\[.+(\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;\])/gm // 这里是抓取全文匹配到该页面所有签到帖let arrCheckinLink = res.text.match(rePage) // 存放所有签到帖的数组let datetime = dayjs().format('YYYY-MM-DD') // 当天的日期 用以匹配帖子标题let patt = new RegExp(datetime) // reg化let arrPatt = arrCheckinLink.map(val =&gt; patt.test(val)) // 模式匹配后的数组let d = arrPatt.indexOf(true) // 找到正确的url索引let reUrl = /&lt;a href="\?.+?(\d+).+?(\d+).+?&gt;\[.+(\d&#123;4&#125;-\d&#123;2&#125;-\d&#123;2&#125;\])/topicId = arrCheckinLink[d].match(reUrl)[2] // 取出正确的帖子id 获取楼层个数 这部分的正则为什么这么写呢，之前爬取全文后分析发现去重的楼层数是直接写入页面的，所以基于正则拿到了这部分内容 12345678910111213141516171819/** * @description 获取发豆机所需楼层个数 * @param &#123;string&#125; idUrl 所需的帖子url * @returns */function getNumOfRe(idUrl) &#123; return superagent .get(idUrl) // 这里需要基于发布获取链接分析url .set(&#123; 'Cookie': cookie &#125;) .then(res =&gt; &#123; let reCount = /(document.getElementById\(\"numofpost\"\)\.value.&#123;4&#125;)(\d+)/ count = res.text.match(reCount)[2] // 这里基于正则从全文获取到 应该发豆的楼层个数 &#125;) .catch(err =&gt; &#123; console.log(err) &#125;)&#125; 发豆提交这部分就是构造json然后基于type(&#39;form&#39;)进行提交 1234567891011121314151617function setBonus(count, topicId) &#123; const jsonstr = &#123; geshu: count, // 发豆楼层 待获取 done unrepeat: 'on', jine: '100', // 发豆个数 一般100 发豆机 rewardtype: 'normal', topicid: topicId &#125; return superagent .post('https://nanyangpt.com/easyreward.php') .set(&#123; 'Cookie': cookie &#125;) .type('form') .send(jsonstr)&#125; 基于定时器的自动执行 设置了setInterval, 1000用于每秒进行探测，然后在定时器内部设定了获取时间用于if判断，到达对应的时间段就触发内部代码(即发豆执行代码) 结语 解放双手2333，然鹅还差最后一步未能完成。事实上目前可以自动发帖，自动发豆，但是相对应的帖子高亮仍未分析完全，不是很懂同样的触发提交却得不到相同的结果。 待续…]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>RegExp</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[win10计划任务-autocheckin脚本]]></title>
-    <url>%2F2020%2F03%2F16%2Fwin10%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1-autocheckin%E8%84%9A%E6%9C%AC%2F</url>
-    <content type="text"><![CDATA[前言 前两天脚本写好后就像跑起来测试下，无奈之前的vultr小鸡已经弃之不用了，手头又没有多余的服务器，只好本地跑跑看了 设置自启动脚本配置bat脚本1node auto-checkin.js 这部分很简单，只要运行bat可以让脚本执行一次就ok 配置计划任务Win + X 选择计算机管理(G)打开之后，在系统工具栏目选择任务计划程序 最右侧选择创建基本任务 123456789101112131415161718192021222324252627282930# 创建基本任务名称：title描述：description# 触发器这里选择每天# 操作这里选择启动程序程序或脚本： test.bat # 浏览选择到你上面创建的bat脚本添加参数：值同上起始于：值为上面的目录# 完成完成后在任务计划程序库找到刚刚创建的程序选择右侧的属性在常规页面：选择不管用户是否登录都要运行（不勾选其子选项）勾选使用最高权限运行配置选择： Windows10 结语 一开始计划任务没配置好，运行不见代码效果，后来才一点点研究改好了，顺便重构了下前面的代码2333]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[插件-getBingUrl]]></title>
-    <url>%2F2020%2F03%2F13%2F%E6%8F%92%E4%BB%B6-getBingUrl%2F</url>
-    <content type="text"><![CDATA[前言不知道为什么，之前网站获取必应壁纸的请求突然失效了，菜鸡如我又不怎么会Php，思前想后，决定写个脚本用来暂时替代了 正文脚本本身其实很简单，只有三步 一、创建按钮这里用// @require JQuery 引入了JQuery，方便操作DOM所以第一步的操作也很简单1$('input[type="submit"]').after() 我用了上面的方法将新的按钮附加在了原有的后面 二、发起请求 但是到第二部这里，碰到了常有的问题 CORS跨域请求 想来想去，包括谷歌浏览器跨域插件，或者JQ的跨域等，都没有较好的方法。这时候我突发奇想，搜索了下油猴跨域，突然就get到了GM_xmlhttpRequest 使用// @grant GM_xmlhttpRequest 引入后123456789// 我将请求写到了点击事件里GM_xmlhttpRequest(&#123; type: 'GET', url: 'https://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1', headers: &#123; "Content-Type": "application/json" &#125;, onload: function(res) &#123; console.log(res.responseText) &#125;&#125;) 这里直接控制台输出确保数据无误 三、替换链接 替换链接其实很简单 不过首先要先获得返回的JSON数据中对应的url 这里使用了eval将JSON字符串解析为JSON数据1234var json = eval('(' + res.responseText + ')') // JSON 对象var url = json['images'][0]['url'] // 提取urlurl = 'https://cn.bing.com' + url // 拼接域名document.getElementsByTagName('input')[0].value = url // 替换链接 结语 至此大功告成，提交一下链接就可以替换网站背景图片了]]></content>
-      <categories>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>tampermonkey</tag>
-        <tag>Bing</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[初探electron + vue]]></title>
-    <url>%2F2020%2F03%2F10%2F%E5%88%9D%E6%8E%A2electron-vue%2F</url>
-    <content type="text"><![CDATA[前言 之前考虑了很久准备使用electron练练手，写一个桌面应用。一开始打算使用electron-vue直接创建，无奈该项目所使用的版本依赖太过古老，只能自己创建了。 构建过程 使用vue-cli初始化项目12# vue-cli初始化vue create -d my-project 安装electron12345# electron installnpm install electron -D or yarn add electron -D# 但是这里建议使用 cnpm install electron -D# 原因是前两者貌似安装下来都会在构建时候出现问题 配置eslint 启动electron 首先在项目根目录下创建electron启动文件 不建议使用electron.js命名123456789101112131415161718192021222324252627282930313233343536373839404142// elec.jsconst &#123; app, BrowserWindow &#125; = require('electron')function createWindow() &#123; // 创建浏览器窗口 const win = new BrowserWindow(&#123; width: 800, height: 600, webPreferences: &#123; nodeIntegration: true &#125; &#125;) // 这里注意入口文件是vue打包后的dist下index.html // 加载 index.html win.loadFile('dist/index.html') // 打开开发者工具 win.webContents.openDevTools()&#125;// This method will be called when Electron has finished// initialization and is ready to create browser windows.// 部分 API 在 ready 事件触发后才能使用。app.whenReady().then(createWindow)// Quit when all windows are closed.app.on('window-all-closed', () =&gt; &#123; // 在 macOS 上，除非用户用 Cmd + Q 确定地退出， // 否则绝大部分应用及其菜单栏会保持激活。 if (process.platform !== 'darwin') &#123; app.quit() &#125;&#125;)app.on('activate', () =&gt; &#123; // 在macOS上，当单击dock图标并且没有其他窗口打开时， // 通常在应用程序中重新创建一个窗口。 if (BrowserWindow.getAllWindows().length === 0) &#123; createWindow() &#125;&#125;) 简单配置下vue.config.js12345678910111213141516171819'use strict'const path = require('path')function resolve(dir) &#123; return path.join(__dirname, dir)&#125;// 注意这里publicPath: './'module.exports = &#123; publicPath: './', outputDir: 'dist', assetsDir: 'static', configureWebpack: &#123; resolve: &#123; alias: &#123; '@': resolve('src') &#125; &#125; &#125;&#125; 修改package.json12345..."script": &#123; "electron_dev": "npm run build &amp;&amp; electron elec.js"&#125;... 预览 不出问题在终端运行 npm run electron_dev 即可弹出GUI]]></content>
-      <categories>
-        <category>Vue</category>
-        <category>Electron</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>Electron</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA['Demo posts']]></title>
+    <title><![CDATA[Demo posts]]></title>
     <url>%2F2020%2F03%2F05%2FDemo-posts%2F</url>
-    <content type="text"><![CDATA[View the SpiderX-Frontend Demo Demo: SpiderX-Frontend Source: SpiderX-Frontend View the easy-css-layout Demo Demo: easy-css-layout Source: easy-css-layout View the museum Demo Demo: museum Source: museum]]></content>
+    <content type="text"><![CDATA[View the SpiderX-Frontend Demo Demo: SpiderX-Frontend Source: SpiderX-Frontend View the easy-css-layout Demo Demo: easy-css-layout Source: easy-css-layout]]></content>
       <categories>
         <category>Demo</category>
       </categories>
       <tags>
         <tag>Vue</tag>
         <tag>Demo</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
 </search>
